@@ -35,7 +35,7 @@ function Layout({ children }: ILayoutProps) {
       </main>
       <footer className="flex justify-center border-t border-neutral-800 text-white p-4">
         <a
-          href="https://github.com/poomrtp"
+          href="https://github.com/poomrtp/tier-list-basic"
           target="_blank"
           rel="noopener noreferrer"
         >
