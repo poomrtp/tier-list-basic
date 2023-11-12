@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { usePathname, useRouter } from 'next/navigation';
 import { ReactNode } from 'react';
 
 interface ILayoutProps {
@@ -6,9 +7,27 @@ interface ILayoutProps {
 }
 
 function Layout({ children }: ILayoutProps) {
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const isShowBackBtn = () => {
+    return pathname !== '/';
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="border-b border-neutral-800 text-white p-4 md:px-8">
+      <header className="border-b border-neutral-800 text-white p-4 md:px-8 flex place-items-center gap-4">
+        {isShowBackBtn() && (
+          <button className="border-0 p-2" onClick={() => router.back()}>
+            <Image
+              className="dark:invert"
+              src={'/arrow-left.svg'}
+              alt="go back icon"
+              width={16}
+              height={16}
+            />
+          </button>
+        )}
         Tier List
       </header>
       <main className="grow flex flex-row p-4 md:p-8 overflow-y-auto gap-4">
