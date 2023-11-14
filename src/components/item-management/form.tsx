@@ -26,7 +26,7 @@ function Form({
           onChange={(e) => setTitle(e.target.value)}
         />
         <button
-          className="p-2 bg-neutral-50 rounded-md text-black"
+          className="py-2 px-4 bg-blue-600 rounded-md text-white"
           type="submit"
           onClick={handleSubmit}
         >

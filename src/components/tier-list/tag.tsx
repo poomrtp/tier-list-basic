@@ -13,14 +13,17 @@ function Tag({
 }: HTMLAttributes<HTMLDivElement> & TagProps) {
   return (
     <div
-      className={`${className} p-4 bg-neutral-800/80 rounded-xl flex justify-between place-items-center gap-4`}
+      className={`${className} p-4 bg-neutral-800/80 rounded-xl flex justify-between place-items-center gap-4 cursor-grab`}
       {...rest}
     >
       <div>{title}</div>
 
       {onRemove && (
         <div className="cursor-pointer">
-          <span className="text-red-700" onClick={() => onRemove(`${title}`)}>
+          <span
+            className="text-red-700 pl-2"
+            onClick={() => onRemove(`${title}`)}
+          >
             X
           </span>
         </div>

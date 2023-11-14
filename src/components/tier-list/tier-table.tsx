@@ -21,22 +21,20 @@ function TierTable({ className }: React.HTMLAttributes<HTMLDivElement>) {
       <div className="p-1 border border-neutral-800 rounded-xl bg-neutral-950">
         {tierList.map((tier, i) => (
           <div key={tier} className="gap-2 m-1 bg-neutral-900 rounded-md">
-            <div className="grid grid-cols-6 w-full ">
+            <div className="grid grid-cols-8 w-full ">
               <div
-                className={`px-4 py-6 col-span-1 ${
-                  i === 0 ? 'bg-neutral-200' : 'bg-neutral-700'
-                } text-center content-center rounded-l-md`}
+                className={`${
+                  i === 0
+                    ? 'bg-gradient-to-br from-pink-700 to-blue-950 to-70%'
+                    : 'bg-neutral-700'
+                } px-4 py-6 col-span-2 md:col-span-1 text-center content-center rounded-l-md`}
               >
-                <span
-                  className={`inline-block align-middle ${
-                    i === 0 && 'text-black'
-                  }`}
-                >
+                <span className="inline-block align-middle font-semibold">
                   {tier}
                 </span>
               </div>
               <div
-                className="p-2 col-span-5 flex flex-wrap justify-start gap-4"
+                className="p-2 col-span-6 md:col-span-7 flex flex-wrap justify-start gap-4"
                 onDrop={(e) => handleOnDrop(e, tier)}
                 onDragOver={handleOnDragOver}
               >
