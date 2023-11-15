@@ -20,7 +20,8 @@ function Layout({ children }: ILayoutProps) {
         {isShowBackBtn() && (
           <button className="border-0 p-2" onClick={() => router.back()}>
             <Image
-              className="dark:invert"
+              // className="dark:invert"
+              className="invert"
               src={'/arrow-left.svg'}
               alt="go back icon"
               width={16}
@@ -43,7 +44,8 @@ function Layout({ children }: ILayoutProps) {
             <span>Github</span>
             <span>
               <Image
-                className="relative align-middle dark:invert"
+                // className="relative align-middle dark:invert"
+                className="relative align-middle invert"
                 src="/arrow-top-right-on-square.svg"
                 alt="arrow icon"
                 width={16}

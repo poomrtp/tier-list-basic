@@ -3,9 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --foreground-theme: theme(textColor.black);
+  /* hotfix light mode */
+  /* --foreground-theme: theme(textColor.black);
   --background-start-theme: theme(colors.white);
-  --background-end-theme: theme(colors.neutral.50);
+  --background-end-theme: theme(colors.neutral.50); */
+
+  --foreground-theme: theme(textColor.white);
+  --background-start-theme: theme(colors.neutral.950);
+  --background-end-theme: theme(colors.neutral.950);
 }
 
 @media (prefers-color-scheme: dark) {
